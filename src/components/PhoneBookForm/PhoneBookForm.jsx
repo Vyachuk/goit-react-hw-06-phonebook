@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addContact } from 'redux/contactsSlice';
 import { Form, FormTitle } from './PhoneBookForm.styled';
 
-export const PhoneBookForm = ({ addContact }) => {
+export const PhoneBookForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-
+  const dispatch = useDispatch();
   const onSubmit = e => {
     e.preventDefault();
-    addContact({ name, number });
+    dispatch(addContact({ name, number, id: crypto.randomUUID() }));
     setName('');
     setNumber('');
   };
