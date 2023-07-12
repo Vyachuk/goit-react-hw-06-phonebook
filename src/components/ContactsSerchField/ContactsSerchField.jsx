@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { changeFilter } from 'redux/contactsSlice';
 import { ContactWrap } from './ContactsSerchField.styled';
@@ -15,8 +14,4 @@ export const ContactsSerchField = () => {
       <input type="text" name="filter" onChange={onInfoChange} />
     </ContactWrap>
   );
-};
-
-ContactsSerchField.propTypes = {
-  value: PropTypes.string,
 };

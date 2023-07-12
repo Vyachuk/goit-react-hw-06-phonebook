@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact } from 'redux/contactsSlice';
 import { selectContacts, selectFilter } from 'redux/selcetors';
@@ -35,8 +34,4 @@ export const ContactList = () => {
       ))}
     </ContactHumanList>
   );
-};
-
-ContactList.propTypes = {
-  contacts: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
 };

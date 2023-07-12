@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/contactsSlice';
@@ -44,9 +43,4 @@ export const PhoneBookForm = () => {
       </Form>
     </>
   );
-};
-
-PhoneBookForm.propTypes = {
-  nameField: PropTypes.string,
-  numberField: PropTypes.string,
 };
